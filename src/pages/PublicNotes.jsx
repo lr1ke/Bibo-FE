@@ -4,6 +4,7 @@ import Note from "../components/Note"
 import "../styles/Home.css"
 import "../styles/Note.css"
 
+
 function PublicNotes() {
     const [notes, setNotes] = useState([]);
   
@@ -49,21 +50,29 @@ function PublicNotes() {
 
     return (
         <>
-                <div class="flex flex-col min-h-screen bg-gray-100 font-sans antialised">
-                <div class="container mx-auto mt-10 px-4 sm:px-0">
-
-
+        <div class="flex flex-col min-h-screen bg-gray-100 font-sans antialised">
+        <div class="container mx-auto mt-10 px-4 sm:px-0">
         <div class="max-w 3-xl mx-auto bg-white p-6 rounded-lg shadow-md">
         <div class="flex items-center justify-between mb-4">
         <div class="container mx-auto mt-10 px-4 sm:px-0">
         <div class="max-w 3-xl mx-auto bg-white p-6 rounded-lg shadow-md">
-        <h1 class="text-2xl font-semibold mb-8 text-center">Public Notes</h1>
+        {/* <img src={sevenHorizontal} alt="horizontalThree" class="w-full h-64 object-cover rounded-lg" /> */}
+
+        <div >
+            
+        <h1 class="text-2xl font-semibold mb-8 text-center">Sanctuary </h1></div>
+        <div >
+        <p class="text-center italic text-gray-600">for all notes </p>
+
+        </div>
+
             {sortedDates.map(([date, notesForDate]) => {
                 // Sort notes for each date in reverse order
                 const sortedNotesForDate = notesForDate.sort((noteA, noteB) => noteB.timestamp - noteA.timestamp);
                 return (
-                    <div key={date}>
-                        <h2 class="text-center my-12">{date}</h2>
+                    <div key={date} >
+                        <h2 class=" bg-clip-text text-transparent bg-gradient-to-r from-pink-300 to-yellow-300
+                         px-2  my-12">{date}</h2>
                         {sortedNotesForDate.map((note) => (
                             <Note  note={note} key={note.id} />
                         ))}

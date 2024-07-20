@@ -12,10 +12,15 @@ function Note({ note }) {
     return (
         <>
         <section>
-        <div className="my-4 transition-transform transform hover:scale-105">
+        <div className="my-4 transition-transform transform hover:scale-105  ">
         <div>
-            <p className="text-center border-b border-gray-400 pb-2">{note.content}</p>
-            <p className="mb-1 note-date">{time}  {note.title}</p>
+            <div className="flex">          
+                <p className="mb-1 note-date">{time} </p>
+            </div>
+            <p className=" border-b border-gray-300 pb-2 ">{note.content}</p>
+            <div className="flex ">          
+                <p className="mb-1 note-date">  {note.title}</p>
+            </div>
         </div>
         </div>           
         </section>
@@ -24,3 +29,4 @@ function Note({ note }) {
 }
 
 export default Note
+

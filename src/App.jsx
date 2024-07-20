@@ -27,7 +27,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SharedLayout />} >
-          <Route index element={<PublicNotes />} />
+          {/* <Route index element={<PublicNotes />} /> */}
           <Route path="home"
             element={
             <ProtectedRoute>
@@ -43,6 +43,13 @@ function App() {
             element={
             <ProtectedRoute>
               <MyNotes />
+            </ProtectedRoute>
+           } />
+          <Route
+            path="/"
+            element={
+            <ProtectedRoute>
+              <PublicNotes />
             </ProtectedRoute>
            } />
 

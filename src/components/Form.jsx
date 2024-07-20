@@ -5,6 +5,7 @@ import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import "../styles/Form.css"
 import LoadingIndicator from "./LoadingIndicator";
 
+
 function Form({ route, method }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -79,9 +80,10 @@ function Form({ route, method }) {
         </div>
         )}
         {loading && <LoadingIndicator />}
-        <button class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700" type="submit">
+        <button class="w-full bg-gradient-to-r from-green-300 to-blue-300 hover:from-pink-300 hover:to-yellow-200 text-white p-2 rounded shadow-2xl" type="submit">
             {name}
         </button>
+
         </form>
         </div>
         </div>
@@ -90,3 +92,4 @@ function Form({ route, method }) {
 }
 
 export default Form
+
